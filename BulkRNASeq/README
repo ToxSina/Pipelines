@@ -9,7 +9,15 @@ logs
 
 List of input file identifiers (basenames): infiles.txt
 
-Adapt rename.sh as needed to simplify file names
+Adapt rename.sh as needed to simplify file names (needs to be moved into 00_DATA to run for now)
+
+Adapt slurm_alignment to use the appropriate HISAT2 reference.
+Human HG38: /rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/GRCh38/GRCh38_Hisat2
+Mouse mm39: /rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/mouse/current/genome/mm39_Hisat2
+
+Adapt slurm_featurecount to use the appropriate gtf file.
+Human HG38: /rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/GRCh38/Homo_sapiens.GRCh38.104.gtf
+Mouse mm39: /rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/mouse/current/genome/Mus_musculus.GRCm39.106.gtf
 
 Run in this order:
 rename.sh (if neccessary, put into 00_DATA, adapt and run)

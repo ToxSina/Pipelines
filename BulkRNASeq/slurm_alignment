@@ -28,5 +28,5 @@ module load rhel7/default-peta4            # REQUIRED - loads the basic environm
 
 module load hisat2
 
-hisat2 -p 20 -x /rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/mouse/current/genome/mm39_Hisat2 -1 02_TRIMMED/$1.trimmed_1.fastq.gz -2 02_TRIMMED/$1.trimmed_2.fastq.gz -S 04_ALIGNED/$1.sam
+hisat2 -p 20 -x <appropriate reference HISAT2 database> -1 02_TRIMMED/$1.trimmed_1.fastq.gz -2 02_TRIMMED/$1.trimmed_2.fastq.gz -S 04_ALIGNED/$1.sam
 samtools view -u 04_ALIGNED/$1.sam | samtools sort -o 05_SORTED/$1.sorted.bam
