@@ -28,4 +28,4 @@ module load rhel7/default-peta4            # REQUIRED - loads the basic environm
 
 
 
-/rds/project/rds-XUr6B1Jhndg/sb2534_Sina/tools/PRINSEQ-plus-plus/bin/prinseq++ -fastq data/$1_1.fq.gz -fastq2 data/$1_2.fq.gz -threads 30 -trim_qual_window 15 -trim_qual_right 30 -trim_left 0 -min_len 30 -out_good 01_TRIMMED/$1.trimmed_1.fastq -out_good2 01_TRIMMED/$1.trimmed_2.fastq
+/rds/project/rds-XUr6B1Jhndg/sb2534_Sina/tools/PRINSEQ-plus-plus/bin/prinseq++ -fastq 00_DATA/$1_1.fq.gz -fastq2 00_DATA/$1_2.fq.gz -threads 30 -trim_qual_window 15 -trim_qual_right 30 -trim_left 0 -min_len 30 -out_good 02_TRIMMED/$1.trimmed_1.fastq -out_good2 02_TRIMMED/$1.trimmed_2.fastq

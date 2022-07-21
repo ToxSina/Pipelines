@@ -1,6 +1,6 @@
 #!/bin/bash
 #! Name of the job:
-#SBATCH -J READGROUPS
+#SBATCH -J MUTECT
 #! Which project should be charged:
 #SBATCH -A MRC-TOX-SL3-CPU
 #! How many whole nodes should be allocated?
@@ -9,7 +9,7 @@
 #! The skylake/skylake-himem nodes have 32 CPUs (cores) each.
 #SBATCH --ntasks=10
 #! How much wallclock time will be required?
-#SBATCH --time=00:30:00
+#SBATCH --time=12:00:00
 #! What types of email messages do you wish to receive?
 #SBATCH --mail-type=FAIL
 #! Uncomment this to prevent the job from being requeued (e.g. if
@@ -26,13 +26,5 @@
 module purge                               # Removes all modules still loaded
 module load rhel7/default-peta4            # REQUIRED - loads the basic environment
 
-module load picard/2.9.2
+/rds/project/rds-XUr6B1Jhndg/mm_fiber_wes/workflow/gatk-4.2.0.0/gatk Mutect2 -R <appropriate FASTA reference> $1
 
-java -jar /usr/local/Cluster-Apps/picard/2.9.2/picard.jar AddOrReplaceReadGroups \
-       I=04_SORTED/$1.sorted.bam \
-       O=06_RG/$1.sorted.bam \
-       RGID=RGforGATK \
-       RGLB=lib1 \
-       RGPL=ILLUMINA \
-       RGPU=unit1 \
-       RGSM=20

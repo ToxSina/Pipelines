@@ -26,5 +26,5 @@
 module purge                               # Removes all modules still loaded
 module load rhel7/default-peta4            # REQUIRED - loads the basic environment
 
-/rds/project/rds-XUr6B1Jhndg/mm_fiber_wes/workflow/gatk-4.2.0.0/gatk MergeVcfs -I pons.list -O allPons.vcf
+/rds/project/rds-XUr6B1Jhndg/mm_fiber_wes/workflow/gatk-4.2.0.0/gatk MergeVcfs -I pons.list -O 06_PON/allPons.vcf
 

@@ -28,5 +28,5 @@ module load rhel7/default-peta4            # REQUIRED - loads the basic environm
 
 module load bowtie
 
-bowtie2 -p 10 --rg-id RGforGATK --rg SM:$1 --rg PL:ILLUMINA -x /rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/mm28/mm10_bowtie2 -1 01_TRIMMED/$1.trimmed_1.fastq.gz -2 01_TRIMMED/$1.trimmed_2.fastq.gz -S 03_ALIGNED/$1.sam
-samtools view -h 03_ALIGNED/$1.sam | samtools sort -o 04_SORTED/$1.sorted.bam
+bowtie2 -p 10 --rg-id RGforGATK --rg SM:$1 --rg PL:ILLUMINA -x <appropriate Bowtie2 reference> -1 02_TRIMMED/$1.trimmed_1.fastq.gz -2 02_TRIMMED/$1.trimmed_2.fastq.gz -S 04_ALIGNED/$1.sam
+samtools view -h 04_ALIGNED/$1.sam | samtools sort -o 05_SORTED/$1.sorted.bam

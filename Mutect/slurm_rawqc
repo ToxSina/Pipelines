@@ -28,4 +28,4 @@ module load rhel7/default-peta4            # REQUIRED - loads the basic environm
 
 module load fastqc
 
-fastqc -noextract -t 10 -o 00_RAWQC data/$1_1.fq.gz data/$1_2.fq.gz
+fastqc -noextract -t 10 -o 01_RAWQC 00_DATA/$1_1.fq.gz 00_DATA/$1_2.fq.gz
