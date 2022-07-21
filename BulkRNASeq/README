@@ -1,0 +1,19 @@
+Directories needed to create:
+00_DATA
+01_RAWQC
+02_TRIMMED
+03_TRIMQC
+04_ALIGNED
+05_SORTED
+logs
+
+List of input file identifiers (basenames): infiles.txt
+
+Adapt rename.sh as needed to simplify file names
+
+Run in this order:
+rename.sh (if neccessary, put into 00_DATA, adapt and run)
+rawqc.sh & trimming.sh
+gzip.sh (At this point raw data can be removed if it is already archived on Citrix)
+trimqc.sh & alignment.sh
+featureCounts.sh (At this point 04_ALIGNED can be removed, as sorted files are smaller and better further on.)

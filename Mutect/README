@@ -1,0 +1,24 @@
+Directories needed to create:
+00_DATA
+01_RAWQC
+02_TRIMMED
+03_TRIMQC
+04_ALIGNED
+05_SORTED
+06_MUTECT
+07_FILTERED
+logs
+
+List of input file identifiers (basenames): infiles.txt
+List of non-normal identifiers (not controls): nonnormal.txt
+List of normals for creating a Panel Of Normals if needed: pons.txt
+
+
+Run in this order:
+rawqc.sh & trimming.sh
+gzip.sh (At this point raw data can be removed if it is already archived on Citrix)
+trimqc.sh & alignment.sh
+If creating PON: mutect_pons.sh
+index.sh
+filter.sh
+

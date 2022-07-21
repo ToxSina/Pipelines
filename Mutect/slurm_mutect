@@ -1,0 +1,30 @@
+#!/bin/bash
+#! Name of the job:
+#SBATCH -J MUTECT
+#! Which project should be charged:
+#SBATCH -A MRC-TOX-SL2-CPU
+#! How many whole nodes should be allocated?
+#SBATCH --nodes=1
+#! How many (MPI) tasks will there be in total? (<= nodes*32)
+#! The skylake/skylake-himem nodes have 32 CPUs (cores) each.
+#SBATCH --ntasks=10
+#! How much wallclock time will be required?
+#SBATCH --time=24:00:00
+#! What types of email messages do you wish to receive?
+#SBATCH --mail-type=FAIL
+#! Uncomment this to prevent the job from being requeued (e.g. if
+#! interrupted by node failure or system downtime):
+##SBATCH --no-requeue
+#SBATCH -o logs/%j.log
+#SBATCH -e logs/%j.err.log
+
+#! For 6GB per CPU, set "-p skylake"; for 12GB per CPU, set "-p skylake-himem": 
+#SBATCH -p icelake
+
+
+. /etc/profile.d/modules.sh                # Leave this line (enables the module command)
+module purge                               # Removes all modules still loaded
+module load rhel7/default-peta4            # REQUIRED - loads the basic environment
+
+/rds/project/rds-XUr6B1Jhndg/mm_fiber_wes/workflow/gatk-4.2.0.0/gatk Mutect2 -R /rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/mm28/Mus_musculus.GRCm38.dna.toplevel.fa -pon /rds/project/rds-XUr6B1Jhndg/sb2534_Projects/JoaquinWES/05_MUTECT/pon/pon.vcf.gz $1
+
