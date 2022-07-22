@@ -31,4 +31,7 @@ index.sh
 If creating PON: mutect_pons.sh, then sbatch slurm_multivcf, then sbatch slurm_pon
 mutect_nonnormal.sh
 filter.sh
+For filtering out the variants passing filter, pysam needs to be installed (use conda activate pysam)!
+passed.sh
 
+Further analysis: Run passed vcfs through the ENSEMBL VEP (Variant Effect Predictor)
