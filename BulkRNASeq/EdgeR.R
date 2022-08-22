@@ -86,4 +86,6 @@ sharedXYZDown <- Reduce(intersect, c(XvsYDown, YvsYDown))
 XOnly_Up <- Reduce(setdiff, list(XvsYUp, ZvsYUp))
 XOnly_Down <- Reduce(setdiff, list(XvsYDown, ZvsYown))
 
-
+#Heatmap
+XvsY.exp.data <- featureTable[XvsY.enriched | XvsY.depleted,]
+heatmap(as.matrix(XvsY.exp.data), Rowv = TRUE)
