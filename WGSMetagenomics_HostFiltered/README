@@ -1,0 +1,38 @@
+Directories needed to create:
+00_DATA
+01_RAWQC
+02_TRIMMED
+03_TRIMQC
+04_FILTER
+05_FILTERQC
+06_ASSEMBLY
+07_SCAFFOLD
+08_WEIGHT
+09_ALIGN
+10_RMA
+11_HOST
+logs
+temp
+TEMP
+
+List of input file identifiers (basenames): infiles.txt
+
+
+This might have to be run in batches (so create batch files from infiles.txt
+by using
+split -d -l <#samples per batch> batch infiles.txt
+
+Example Host database for slurm_filterHost:
+Human HG38: /rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/GRCh38/GRCh38_Bowtie2
+
+Run in this order:
+rawqc.sh & trimming.sh
+gzip.sh (At this point raw data can be removed if it is already archived on Citrix)
+trimqc.sh & filter.sh
+filterqc.sh & assembly.sh
+If assemblies don't finish in the 36 hrs: reSpades.sh (for these infiles, save them in redo.txt)
+scaffold.sh
+weight.sh
+align.sh
+lrrma.sh
+
