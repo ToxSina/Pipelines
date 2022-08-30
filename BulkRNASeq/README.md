@@ -17,13 +17,13 @@ logs
 
 (In the future there might be a setup script for this purpose.)
 
-Adapt slurm_alignment to use the appropriate HISAT2 reference.
-Human HG38: /rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/GRCh38/GRCh38_Hisat2
-Mouse mm39: /rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/mouse/current/genome/mm39_Hisat2
+Adapt slurm_alignment to use the appropriate HISAT2 reference.  
+Human HG38: /rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/GRCh38/GRCh38_Hisat2  
+Mouse mm39: /rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/mouse/current/genome/mm39_Hisat2  
 
-Adapt slurm_featurecount to use the appropriate gtf file.
-Human HG38: /rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/GRCh38/Homo_sapiens.GRCh38.104.gtf
-Mouse mm39: /rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/mouse/current/genome/Mus_musculus.GRCm39.106.gtf
+Adapt slurm_featurecount to use the appropriate gtf file.  
+Human HG38: /rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/GRCh38/Homo_sapiens.GRCh38.104.gtf  
+Mouse mm39: /rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/mouse/current/genome/Mus_musculus.GRCm39.106.gtf  
 
 __Run in this order__ (scripts under the same number can be run in parallel, but the previous number has to be finished before starting the next):
 1) rename.sh (if neccessary, put into 00_DATA, adapt and run)
