@@ -7,7 +7,7 @@ The script has of course to be adapted to replace the correct pattern.
 
 __Directories needed to create:__  
 00_DATA  
-01_RAWQC
+01_RAWQC  
 02_TRIMMED  
 03_TRIMQC  
 04_ALIGNED  
