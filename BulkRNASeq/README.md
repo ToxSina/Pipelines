@@ -1,24 +1,18 @@
 __Input required:__
 *   FastQ or gzipped FastQ files which are to be placed in a directory called 00_DATA. They need to have the endings .fastq or .fq (or .fastq.gz / .fq.gz if gzipped) and just before that ending a pair identifier (_1 vs _2)
 *   List of input file identifiers (basenames): infiles.txt This needs to include one of the identifiers per line. Identifiers are the part of the input file name with the ending and pair identifier removed (so there's one identifier for two paired read inout files)
-
+  
 If the input files do not match the naming requirements, they can be renamed using the rename.sh script. It has to be moved into the directory with the files, so If you do it after setting up the directory structure into 00_DATA, if you do it before into the directory you are storing your raw data in.
 The script has of course to be adapted to replace the correct pattern.
 
-__Directories needed to create:__
-00_DATA
-
+__Directories needed to create:__  
+00_DATA  
 01_RAWQC
-
-02_TRIMMED
-
-03_TRIMQC
-
-04_ALIGNED
-
-05_SORTED
-
-logs
+02_TRIMMED  
+03_TRIMQC  
+04_ALIGNED  
+05_SORTED  
+logs  
 
 
 (In the future there might be a setup script for this purpose.)
