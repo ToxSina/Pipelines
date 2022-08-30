@@ -7,12 +7,19 @@ The script has of course to be adapted to replace the correct pattern.
 
 __Directories needed to create:__
 00_DATA
+
 01_RAWQC
+
 02_TRIMMED
+
 03_TRIMQC
+
 04_ALIGNED
+
 05_SORTED
+
 logs
+
 
 (In the future there might be a setup script for this purpose.)
 
