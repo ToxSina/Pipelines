@@ -7,7 +7,7 @@ __Input required:__
 If the input files do not match the naming requirements, they can be renamed using the ```rename.sh``` script. It has to be moved into the directory with the files, so If you do it after setting up the directory structure into 00_DATA, if you do it before into the directory you are storing your raw data in.
 The script has of course to be adapted to replace the correct pattern.
 
-__Directories needed to create:__ 
+__Directories needed to create:__   
 00_DATA  
 01_RAWQC  
 02_TRIMMED  
@@ -22,11 +22,11 @@ logs
 
 (In the future there might be a setup script for this purpose.)
 
-Replace appropriate Bowtie2 reference in slurm_alignment:
+Replace appropriate Bowtie2 reference in slurm_alignment:  
 Mouse mm28 (not current): ```/rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/mm28/mm10_bowtie2```  
 Human hs38: ```/rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/GRCh38/GRch38_Bowtie2```  
 
-Replace appropriate FASTA reference in slurm_mutect and slurm_mutectFilter:
+Replace appropriate FASTA reference in slurm_mutect and slurm_mutectFilter:  
 Mouse mm28 (not current): ```/rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/mm28/Mus_musculus.GRCm38.dna.toplevel.fa```  
 Human hs38: ```/rds/project/rds-XUr6B1Jhndg/sb2534_Sina/databases/GRCh38/Homo_sapiens.GRCh38.dna.primary_assembly.fa```  
 
