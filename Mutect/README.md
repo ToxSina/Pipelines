@@ -40,4 +40,4 @@ __Run in this order__ (scripts under the same number can be run in parallel, but
 7) ```filter.sh```
 8) ```passed.sh```
 
-Further analysis: Run passed vcfs through the ENSEMBL VEP (Variant Effect Predictor)
+Further analysis: Run passed vcfs through the ENSEMBL VEP (Variant Effect Predictor): https://www.ensembl.org/info/docs/tools/vep/index.html
