@@ -1,6 +1,6 @@
 __Input required:__
 *   FastQ or gzipped FastQ files which are to be placed in a directory called 00_DATA. They need to have the endings .fastq or .fq (or .fastq.gz / .fq.gz if gzipped) and just before that ending a pair identifier (_1 vs _2)
-*   List of input file identifiers (basenames): infiles.txt This needs to include one of the identifiers per line. Identifiers are the part of the input file name with the ending and pair identifier removed (so there's one identifier for two paired read files)
+*   List of input file identifiers (basenames): ```infiles.txt``` This needs to include one of the identifiers per line. Identifiers are the part of the input file name with the ending and pair identifier removed (so there's one identifier for two paired read files)
   
 If the input files do not match the naming requirements, they can be renamed using the ```rename.sh``` script. It has to be moved into the directory with the files, so If you do it after setting up the directory structure into 00_DATA, if you do it before into the directory you are storing your raw data in.
 The script has of course to be adapted to replace the correct pattern.
@@ -32,5 +32,5 @@ __Run in this order__ (scripts under the same number can be run in parallel, but
 4) ```trimqc.sh``` & ```alignment.sh```
 5) ```featureCounts.sh``` (At this point 04_ALIGNED can be removed, as sorted files are smaller and better further on. If you are not going to reuse or archive trimmed files, you can also remove 02_TRIMMED.)
 
-The featureCount table can then be used as input for the EdgeR.R script in R (or RStudio).  
+The featureCount table can then be used as input for the ```EdgeR.R script``` in R (or RStudio).  
 For this, the library edgeR has to be installed and loaded. The script is just a basis to create the R code needed based on the comparisons required and the overall structure of the data (replicates, groups,... ).
